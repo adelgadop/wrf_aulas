@@ -6,6 +6,12 @@ __pycache__/
 # C extensions
 *.so
 
+# Jupyter notebook 
+*.ipynb
+
+# Big data from WRF_model
+data/*
+
 # Distribution / packaging
 .Python
 build/
