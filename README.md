@@ -13,6 +13,15 @@ This is a project for educational purposes about learning WRF-Chem.
   - [ ] **wrf.exe**: Run your WRF model
   - [ ] Explore your data with WRF-Python
 
+### Data management plan (tree project)
+
+├── data (*) This directory doesn't upload because it'll get input and output modelling data.
+├── figs
+├── namelists
+├── post
+├── scripts
+└── tabs
+
 ### How use GitHub since terminal
   1. Create a branch.  
      - `git checkout <branch name>`
