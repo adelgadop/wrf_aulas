@@ -3,9 +3,9 @@ This is a project for educational purposes about learning WRF-Chem.
 
 # Mighty Scientist's TODO List :V
 - [ ] Sail to `WPS program`
-  - [ ] **Geogrid**: Design your amazing domain and choose your fighter (e.g., one, two or three domains)
+  - [x] **Geogrid**: Design your amazing domain and choose your fighter (e.g., one, two or three domains)
     - [ ] Create your Python script or improve one I did to replace the ncl script installed by default `plotgrids_new.ncl`
-  - [ ] **Ungrib** your datasets, and explore the period that your are excited to analize. Explain to yourself why is important for you.
+  - [x] **Ungrib** your datasets, and explore the period that your are excited to analize. Explain to yourself why is important for you.
   - [ ] **Metgrid** conquer your meteorological and geographic static data
 - [ ] Find the secret of the `WRF model` and enjoy the glory days
   - [ ] Design your `namelist.input`
