@@ -23,6 +23,11 @@ This is a project for educational purposes about learning WRF-Chem.
 ├── scripts
 └── tabs
 ```
+### Install a Python environment
+
+```
+conda env create -f environment.yml
+```
 
 ### How use GitHub since terminal
   1. Create a branch.  

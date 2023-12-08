@@ -9,7 +9,7 @@ __pycache__/
 # Jupyter notebook 
 *.ipynb
 
-# Big data from WRF_model
+# Big data from WRF_model > 20 MB
 data/*
 
 # Distribution / packaging

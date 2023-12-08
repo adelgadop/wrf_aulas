@@ -1,0 +1,16 @@
+name: wrf
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - ipython
+  - xarray
+  - PyNIO
+  - netCDF4
+  - yaml
+  - PyNGL
+  - matplotlib
+  - cartopy
+  - basemap
+  - wrf-python
