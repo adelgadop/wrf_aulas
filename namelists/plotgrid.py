@@ -24,6 +24,25 @@ if match:
     ref_lat = float(re.search(r'ref_lat\s*=\s*([-+]?\d*\.\d+|\d+)', geogrid_content).group(1))
     ref_lon = float(re.search(r'ref_lon\s*=\s*([-+]?\d*\.\d+|\d+)', geogrid_content).group(1))
     stand_lon = float(re.search(r'stand_lon\s*=\s*([-+]?\d*\.\d+|\d+)', geogrid_content).group(1))
+    
+    # Print values for debugging
+    print("ref_lon:", ref_lon)
+    print("e_we:", e_we)
+    print("dx:", dx)
+    print("ref_lat:", ref_lat)
+    print("e_sn:", e_sn)
+    print("dy:", dy)
+
+    # Calculate extent
+    left = ref_lon - e_we * dx / 2
+    right = ref_lon + e_we * dx / 2
+    bottom = ref_lat - e_sn * dy / 2
+    top = ref_lat + e_sn * dy / 2
+
+    print("left:", left)
+    print("right:", right)
+    print("bottom:", bottom)
+    print("top:", top)
 
     # Create a Cartopy GeoAxes instance
     fig, ax = plt.subplots(subplot_kw={'projection': ccrs.PlateCarree()})
