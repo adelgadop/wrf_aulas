@@ -11,7 +11,7 @@ __pycache__/
 
 # Big data from WRF_model > 20 MB
 data/*
-
+*/old/*
 # Distribution / packaging
 .Python
 build/
