@@ -3,6 +3,7 @@
 # Author:       Alejandro D. Peralta
 # Last update:  February 2024
 #
+# conda activate wrf
 # import libraries ============================================================
 
 import numpy as np
@@ -148,12 +149,14 @@ for ax, geo in zip([ax1, ax2], geos):
     ax.add_feature(states, linewidth=.5, edgecolor="black")
 
 # Adding zoom region inset axes using ConnectionPatch
+# > Fazer zoom de uma area maior para outra menor
 con1 = ConnectionPatch(xyA=(lon[0], lat[-1]), xyB=(lon[-1], lat[-1]), 
                        coordsA="data", coordsB="data", axesA=ax2, axesB=ax1, color=cborde)
 con2 = ConnectionPatch(xyA=(lon[0], lat[0 ]), xyB=(lon[-1], lat[ 0]), 
                        coordsA="data", coordsB="data", axesA=ax2, axesB=ax1, color=cborde)
 ax2.add_artist(con1)
 ax2.add_artist(con2)
+# termina o zoom
 
 #plt.show()
 fig.savefig("../figs/map_domain.png",dpi=300,bbox_inches='tight', facecolor='white')
