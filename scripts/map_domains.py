@@ -1,7 +1,7 @@
 # =============================================================================
 #
 # Author:       Alejandro D. Peralta
-# Last update:  July 2023
+# Last update:  February 2024
 #
 # import libraries ============================================================
 
@@ -54,8 +54,17 @@ fig, (ax1, ax2) = plt.subplots(1,2,figsize=(14,6.5),
 #ax2 = plt.subplot(gs[0:4, 2:], projection=ccrs.PlateCarree())
 
 geos = ['geo_em.d01.nc', 'geo_em.d02.nc']
-cores_map = 'gist_earth'  # 'gist_earth',  rainbow, terrain, turbo,
-cborde = 'deepskyblue'
+
+# Color scales for terrain ----------------------------------------------------
+cores_map = plt.cm.terrain  # gist_earth, turbo
+colors_undersea = cores_map(np.linspace(-2, 0.05, 0))
+colors_land = cores_map(np.linspace(0.20, 1, 2000))
+all_colors = np.vstack((colors_undersea, colors_land))
+terrain_map = mpl.colors.LinearSegmentedColormap.from_list(cores_map, all_colors)
+ocean_color = (173/255, 216/255, 230/255)  # Light blue color
+# End colors for terrain elevations -------------------------------------------
+
+cborde = "k"
 
 for ax, geo in zip([ax1, ax2], geos):
     gl = ax.gridlines(crs=ccrs.PlateCarree(), draw_labels=True,
@@ -72,7 +81,7 @@ for ax, geo in zip([ax1, ax2], geos):
 
     # Add box for second domain
     if geo == geos[0]:
-        ds.HGT_M.plot(cmap=cores_map, ax=ax,
+        ds.HGT_M.plot(cmap=terrain_map, ax=ax,
                       cbar_kwargs={'label': 'Height ground terrain [m]', 
                                    'spacing':'proportional',
                                    'location':'bottom',
@@ -101,14 +110,14 @@ for ax, geo in zip([ax1, ax2], geos):
         ax.legend(loc='lower right',ncol=2)
 
     else: # second domain
-        ds.HGT_M.plot(cmap=cores_map, ax=ax,
+        ds.HGT_M.plot(cmap=terrain_map, ax=ax,
                       cbar_kwargs={'label': 'Height ground terrain [m]', 
                                    'spacing':'proportional',
                                    'location':'right',
                                    'pad':0.025,
                                    'shrink':0.3, 'aspect':25})
         # Adding MASP shapefile
-        fname = '../fig/MunRM07.shp'
+        fname = '../data/shapefile/MunRM07.shp'
         shape_feature = cfeature.ShapelyFeature(Reader(fname).geometries(),
                                                 ccrs.PlateCarree(), edgecolor='black')
         ax.add_feature(shape_feature, linewidth=.5, edgecolor = 'black', facecolor='none')
@@ -147,4 +156,4 @@ ax2.add_artist(con1)
 ax2.add_artist(con2)
 
 #plt.show()
-fig.savefig("../fig/map_domain.png",dpi=300,bbox_inches='tight', facecolor='white')
+fig.savefig("../figs/map_domain.png",dpi=300,bbox_inches='tight', facecolor='white')

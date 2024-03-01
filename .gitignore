@@ -9,6 +9,9 @@ __pycache__/
 # Jupyter notebook 
 *.ipynb
 
+# tar.gz
+*.tar.gz
+
 # Big data from WRF_model > 20 MB
 data/*
 */old/*
