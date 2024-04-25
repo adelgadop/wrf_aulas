@@ -14,7 +14,7 @@
  j_parent_start    =     1,    35,    30, 
  e_we              =   150,   100,   100,
  e_sn              =   100,   100,   100,
- geog_data_res     = 'modis_30s+30s','modis_30s+30s','modis_30s+30s',
+ geog_data_res     = 'cglc_modis_lcz+modis_30s+30s','cglc_modis_lcz+modis_30s+30s','cglc_modis_lcz+modis_30s+30s',
  dx = 9000,
  dy = 9000,
  map_proj = 'mercator',
