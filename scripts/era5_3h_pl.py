@@ -2,9 +2,9 @@ import cdsapi
 
 # namelists
 yr   = "2018"
-mm   = "04"
-dt   = "01"
-path = "/p1-sto-amanan/dados_compartilhados/met/ERA5/"
+mm   = "03"
+dt   = ["25","26","27","28","29","30","31"]
+path = "/scr1/alejandro/shared/era5/"
 
 dataset = "reanalysis-era5-pressure-levels"
 request = {
@@ -46,8 +46,9 @@ request = {
         "1000"
     ],
     "data_format": "grib",
-    "download_format": "unarchived"
+    "download_format": "unarchived",
+    "area": [-10, -60, -30, -30] # North, West, South, East
 }
 
 client = cdsapi.Client()
-client.retrieve(dataset, request).download(path + f"era5_{yr}{mm}{dt}_3h_pl.grib")
+client.retrieve(dataset, request).download(path + f"era5_{yr}{mm}{dt[0]}_{yr}{mm}{dt[-1]}_3h_pl.grib")

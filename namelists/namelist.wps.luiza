@@ -34,6 +34,6 @@
 &metgrid
  fg_name = 'FILE',
  io_form_metgrid = 2,
- opt_output_from_metgrid_path = '/scr1/alejandro/proj/wrfda/data/met_em/',
+ opt_output_from_metgrid_path = '/scr1/alejandro/proj/wrf_aulas/data/met_em/',
  opt_metgrid_tbl_path         = './metgrid/',
 /
