@@ -1,9 +1,9 @@
 &share
  wrf_core = 'ARW',
  max_dom = 2,
- start_date = '2018-03-25_00:00:00', '2018-03-25_00:00:00',
- end_date   = '2018-03-31_00:00:00', '2018-03-31_00:00:00',
- opt_output_from_geogrid_path =  '/scr1/alejandro/proj/wrf_aulas/data/geo_em/',
+ start_date = '2024-04-25_00:00:00', '2024-04-25_00:00:00',
+ end_date   = '2024-04-30_00:00:00', '2024-04-30_00:00:00',
+!opt_output_from_geogrid_path =  '/scr1/alejandro/proj/wrf_aulas/data/geo_em/',
  interval_seconds = 10800
 /
 
@@ -28,11 +28,11 @@
 
 &ungrib
  out_format = 'WPS',
- prefix = 'PRL', 
+ prefix = 'LUIZA', 
 /
 
 &metgrid
- fg_name = 'SFC', 'PRL'
+ fg_name = 'LESLIE', 'LUIZA'
  io_form_metgrid = 2,
  opt_output_from_metgrid_path = '/scr1/alejandro/proj/wrf_aulas/data/met_em/',
  opt_metgrid_tbl_path         = './metgrid/',

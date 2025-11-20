@@ -1,9 +1,9 @@
 import cdsapi
 
 # namelists
-yr   = "2018"
-mm   = "03"
-dt   = ["25","26","27","28","29","30","31"]
+yr   = "2024"
+mm   = "04"
+dt   = ["25","26","27","28","29","30"]
 path = "/scr1/alejandro/shared/era5/"
 
 dataset = "reanalysis-era5-pressure-levels"

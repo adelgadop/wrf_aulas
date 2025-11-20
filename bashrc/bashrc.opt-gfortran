@@ -1,0 +1,67 @@
+# Endereço das Libs (compiladas com gcc e gfortran)
+
+module load gcc/13.4.0
+export BUILD_LIBS="/opt/wrf_libs/gcc/13.4.0"
+export DIR="$HOME/BLDLIB"
+
+# Export dos compiladores
+export CC=gcc
+export CXX=g++
+export F77=gfortran
+export FC=gfortran
+export FCFLAGS=-m64
+export FFLAGS=-m64  
+export LDFLAGS=-L$BUILD_LIBS/lib
+export CPPFLAGS=-I$BUILD_LIBS/include
+export LD_LIBRARY_PATH="/usr/local/lib:/usr/lib:/usr/lib64:/usr/lib32:/lib:/lib64:/lib32:$LD_LIBRARY_PATH"
+
+# Netcdf
+export NETCDF="$BUILD_LIBS/netcdf"
+export NETCDF_DIR="$NETCDF"
+export NETCDF_INCDIR="$NETCDF/include"
+export NETCDF_INC="$NETCDF_INCDIR"
+export NETCDF_LIBDIR="$NETCDF/lib"
+export NETCDF_LIB="$NETCDF_LIBDIR"
+export PATH="$NETCDF/bin:$PATH"
+export LD_LIBRARY_PATH="$NETCDF_LIBDIR:$NETCDF_INCDIR:$LD_LIBRARY_PATH"
+
+## MPICH
+export PATH="$BUILD_LIBS/mpich/bin:$PATH"
+export LD_LIBRARY_PATH="$BUILD_LIBS/mpich/lib:$LD_LIBRARY_PATH"
+export OMP_NUM_THREADS=1
+
+# Livrarias
+export JASPERLIB="$BUILD_LIBS/lib"
+export JASPERINC="$BUILD_LIBS/include"
+export libpng="$BUILD_LIBS/lib"
+export zlib="$BUILD_LIBS/lib"
+export LD_LIBRARY_PATH="$JASPERLIB:$libpng:$zlib:$LD_LIBRARY_PATH"
+
+# IOAPI
+BASEDIR="$DIR/ioapi-3.2"
+INSTALL_DIR="$BASEDIR/ioapi"
+
+#export WRFIO_NCD_LARGE_FILE_SUPPORT=1
+#export WRF_EM_CORE=1
+#export WRF_NMM_CORE=0
+#export WRF_DA_CORE=0
+#export WRF_PLUS_CORE=0
+#export MALLOC_CHECK_=0
+#export EM_CORE=1
+#export NMM_CORE=0
+## (o PATH do WRF_SRC_ROOT_DIR deve ser onde o WRF foi descompactado)
+##export WRF_SRC_ROOT_DIR=/opt/wrf_libs/gcc/11.4.0/WRF
+#export WRF_SRC_ROOT_DIR=/home/djalma/WRFV4.5.2
+##export WRF_DIR=/opt/wrf_libs/gcc/11.4.0/WRF
+#export WRF_DIR=/home/djalma/WRFV4.5.2
+export SED=/usr/bin/sed
+
+ulimit -s unlimited
+ulimit -v unlimited
+
+
+# Binários
+export PATH="$BUILD_LIBS/bin:$PATH"
+
+#GRADS
+#export PATH="/opt/opengrads:$PATH"
