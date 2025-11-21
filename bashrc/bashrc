@@ -125,7 +125,10 @@ export DIR=$HOME/BLDLIB
 export CMAQ_HOME=$jano/CMAQv5.5
 export CMAQ_DATA=$CMAQ_HOME/data
 
+#source ~/bashrc_gfortran_gnu_compiler
 source ~/bashrc.opt-gfortran
+#source ~/bashrc.opt-ifort2024
+
 # WRF-Chem variables
 export WRF_EM_CORE=1     # WRF-Chem only works with ARW
 export WRF_NMM_CORE=0

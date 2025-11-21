@@ -9,8 +9,8 @@ export CC=gcc
 export CXX=g++
 export F77=gfortran
 export FC=gfortran
-export FCFLAGS=-m64
-export FFLAGS=-m64  
+export FCFLAGS="-fallow-argument-mismatch -m64"
+export FFLAGS="-fallow-argument-mismatch -m64"
 export LDFLAGS=-L$BUILD_LIBS/lib
 export CPPFLAGS=-I$BUILD_LIBS/include
 export LD_LIBRARY_PATH="/usr/local/lib:/usr/lib:/usr/lib64:/usr/lib32:/lib:/lib64:/lib32:$LD_LIBRARY_PATH"
@@ -28,7 +28,7 @@ export LD_LIBRARY_PATH="$NETCDF_LIBDIR:$NETCDF_INCDIR:$LD_LIBRARY_PATH"
 ## MPICH
 export PATH="$BUILD_LIBS/mpich/bin:$PATH"
 export LD_LIBRARY_PATH="$BUILD_LIBS/mpich/lib:$LD_LIBRARY_PATH"
-export OMP_NUM_THREADS=1
+#export OMP_NUM_THREADS=1
 
 # Livrarias
 export JASPERLIB="$BUILD_LIBS/lib"
