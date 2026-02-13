@@ -4,7 +4,7 @@
  start_date = '2024-09-25_00:00:00',
  end_date   = '2024-09-26_00:00:00',
  opt_output_from_geogrid_path = './'
- interval_seconds = 21600
+ interval_seconds = 3600
 /
 
 &geogrid
@@ -28,11 +28,11 @@
 
 &ungrib
  out_format = 'WPS',
- prefix = 'FILE',
+ prefix = 'UPP',
 /
 
 &metgrid
- fg_name = 'FILE',
+ fg_name = 'SFC', 'UPP'
  io_form_metgrid = 2,
  opt_output_from_metgrid_path = '/scr1/alejandro/proj/wrf_aulas/data/met_em/',
  opt_metgrid_tbl_path         = './metgrid/',
