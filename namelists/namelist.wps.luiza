@@ -1,10 +1,10 @@
 &share
  wrf_core = 'ARW',
  max_dom = 2,
- start_date = '2024-04-29_00:00:00', '2024-04-29_00:00:00', 
- end_date   = '2024-05-15_00:00:00', '2024-05-15_00:00:00', 
+ start_date = '2024-04-25_00:00:00', '2024-04-25_00:00:00', 
+ end_date   = '2024-04-29_00:00:00', '2024-04-29_00:00:00', 
  opt_output_from_geogrid_path =  './'
- interval_seconds = 21600
+ interval_seconds = 10800
 /
 
 &geogrid
@@ -12,8 +12,8 @@
  parent_grid_ratio =   1,     5,
  i_parent_start    =   1,    35,
  j_parent_start    =   1,    26,
- e_we              = 100,   100,
- e_sn              =  75,   100,
+ e_we              = 101,   101,
+ e_sn              =  75,   101,
  geog_data_res = 'default', 'default', 
  dx = 5000,
  dy = 5000,
