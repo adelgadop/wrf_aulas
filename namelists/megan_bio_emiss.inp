@@ -1,0 +1,9 @@
+&control
+
+domains = 2,
+start_lai_mnth = 3,
+end_lai_mnth   = 5,
+wrf_dir   = '/scr1/alejandro/WRF/test/em_real'
+megan_dir = '/scr1/alejandro/shared/megan_data'
+
+/
