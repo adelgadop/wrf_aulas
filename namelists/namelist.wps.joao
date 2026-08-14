@@ -9,21 +9,21 @@
 
 &geogrid
  parent_id         =   1,    1,   2,
- parent_grid_ratio =   1,    4,   4,
- i_parent_start    =   1,   25, 168,
- j_parent_start    =   1,   20,  42,
- e_we              =  150, 261, 191,
- e_sn              =  100, 181, 161,
+ parent_grid_ratio =   1,    6,   5,
+ i_parent_start    =   1,  105, 158,
+ j_parent_start    =   1,   35,  68,
+ e_we              =  191, 301, 191,
+ e_sn              =  181, 199, 161,
  geog_data_res = 'default', 'default', 'default',
- dx = 16000,
- dy = 16000,
+ dx = 30000,
+ dy = 30000,
  map_proj = 'lambert', 
- ref_lat   = -21.55,
- ref_lon   = -46.00,
- truelat1  = -30.00,
- truelat2  = -60.00,
- stand_lon = -45.00,
- geog_data_path = '/scr1/alejandro/shared/geo_hr/'
+ ref_lat   = -12.04,
+ ref_lon   = -57.13,
+ truelat1  = -10.00,
+ truelat2  = -20.00,
+ stand_lon = -57.13,
+ geog_data_path = '/home/alejandro/data/geog_v4/'
 /
 
 &ungrib
