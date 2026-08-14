@@ -1,0 +1,37 @@
+&CONTROL
+ anthro_dir          = '/scr1/alejandro/proj/wrf_aulas/data/htapv3'
+ wrf_dir             = '/scr1/alejandro/WRF/test/em_real'
+ src_file_prefix     = 'edgar_HTAPv3_2018_'
+ domains             = 2
+ src_file_suffix     = '.nc'
+ src_names           = 'CO(28)','NOx(30)','SO2(64)','NH3(17)', 'NMVOC(100)',
+                       'PM10(1)','PM2.5(1)'
+ sub_categories      = 'others','avi','ind','road_exh','road_res','agr'
+ cat_var_prefix      = ''
+ serial_output       = .false.
+ start_output_time   = '2018-04-01_00:00'
+ data_yrs_offset     =  0
+ emissions_zdim_stag = 1
+ emis_map          = 'SO2      -> SO2',
+                     'CO       -> CO',
+                     'NO       -> 0.9*NOx',
+                     'NO2      -> 0.1*NOx',
+                     'NH3      -> NH3',
+                     'C2H4     -> 0.080*NMVOC', 
+                     'C2H6     -> 0.050*NMVOC', 
+                     'C3H6     -> 0.050*NMVOC', 
+                     'C3H8     -> 0.060*NMVOC', 
+                     'BIGALK   -> 0.350*NMVOC',
+                     'MEK      -> 0.030*NMVOC',
+                     'TOLUENE  -> 0.055*NMVOC',
+                     'HCHO     -> 0.070*NMVOC',
+                     'CH3CHO   -> 0.100*NMVOC',
+                     'CH3OH    -> 0.001*NMVOC',
+                     'KET      -> 0.051*NMVOC',
+                     'CH3COCH3 -> 0.020*NMVOC',
+                     'CH3COOH  -> 0.001*NMVOC',
+                     'EC(a)    -> 0.204*PM2.5(avi+.09*ind+others+10.0*road_exh+20.0*road_res)',
+                     'OC(a)    -> 0.458*PM2.5(avi+.09*ind+others+10.0*road_exh+20.0*road_res)',
+                     'PM_25(a) -> 0.338*PM2.5(avi+.09*ind+others+10.0*road_exh+20.0*road_res)',
+                     'PM_10(a) -> 0.700*PM10'
+/
